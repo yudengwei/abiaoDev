@@ -1,0 +1,6 @@
+cc_binary {
+    name: "devtest",
+    srcs: ["devtest.c"],
+    product_specific: true,
+    cflags: ["-Werror", "-Wno-unused-parameter"],
+}
