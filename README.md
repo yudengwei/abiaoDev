@@ -9,3 +9,11 @@ kernel-abiao 是内核驱动代码， 放到 $(内核源码根目录)/common/dri
                     devtest \
                     abiao.default \
 
+jni:
+
+frameworks/base/services/core/jni/Android.bp
+    "com_android_server_abiaoservice.cpp"
+
+frameworks/base/services/core/jni/onload.cpp
+    int register_android_server_AbiaoService(JNIEnv* env);
+    register_android_server_AbiaoService(env);

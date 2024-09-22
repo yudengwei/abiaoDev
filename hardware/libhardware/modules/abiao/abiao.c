@@ -62,6 +62,8 @@ static int abiao_device_open(const struct hw_module_t* module, const char* name,
         return -EFAULT;
     }
 
+    // 将这个device赋值过去
+    *device = &(dev->common);
     ALOGE("Abiao: open /dev/abiao successfully.");
     return 0;
 }
