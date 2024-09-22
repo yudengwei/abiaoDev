@@ -1,0 +1,13 @@
+cc_library_shared {
+    name: "abiao.default",
+    relative_install_path : "hw", //最终安装在放在/vendor/bin/hw目录下
+    proprietary: true, // 安装在放在/vendor/bin 下
+    srcs: ["abiao.c"],
+    cflags: ["-Wall", "-Werror", "-Wno-unused-parameter", "-Wno-undefined-internal"],
+    header_libs: ["libhardware_headers"],
+    shared_libs: [
+            "liblog",
+            "libcutils",
+            "libutils",
+    ],
+}
